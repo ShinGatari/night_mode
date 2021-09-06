@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+}
+
+.outer {
+    height: 100vh;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch:checked ~ .outer {
+    background: #092c3e;
+}
+
+.outer .content {
+    display: flex;
+    max-width: 570px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#switch:checked ~ .outer .content {
+    background: #092c3e;
+}
+
+.content .toggle {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background: #092c3e;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#switch:checked ~ .outer .toggle {
+    background: #fff;    
+}
+
+.toggle .circle {
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer .circle {
+    margin-left: 22px;
+    background: #092c3e;
+}
+
+
+.content .image-box {
+    height: 232px;
+    width: 200px;
+    border-radius: 12px;
+    background: #092c3e;
+    padding: 3px;
+}
+
+#switch:checked ~ .outer .image-box {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);;
+}
+
+.content .image-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid#fff;
+}
+
+#switch:checked ~ .outer .image-box img {
+    border-color: transparent;
+}
+
+.content .details {
+    width: 58%;
+    margin: 10px 0px 20px 20px;
+}
+
+#switch:checked ~ .outer .details {
+    color: #fff;
+}
+
+.content .details .name {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.content .details .job {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content .details p {
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.content .details button {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    outline-color: none;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    padding: 6px 14px;    
+    background: #092c3e;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer button {
+    color: #092c3e;
+    background: #fff;    
+}
+
+.details button:hover {
+    transform: scale(0.90);
+}
+
+.content .details .media-icons {
+    position: absolute;
+    bottom: 16px;
+    right: 15px;
+}
+
+.content .details .media-icons a {
+    display: inline-flex;    
+    margin: 0 4px;
+    text-decoration: none;
+    color: #092c3e;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+#switch:checked ~ .outer .media-icons a {
+    color: #fff;
+    opacity: 1;
+}
+
+.content .details .media-icons a:hover {
+    opacity: 1;
+}
+
+#switch {
+    display: none;
+}
